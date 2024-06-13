@@ -39,7 +39,6 @@ struct MemoryGame<CardContent> where CardContent:Equatable{
                 resetAllCards()
             }
         }
-        print("pending cards \(pendingMatchingPairs)")
         return pendingMatchingPairs == 0
     }
 
