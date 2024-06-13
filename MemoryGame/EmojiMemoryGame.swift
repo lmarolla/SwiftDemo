@@ -2,19 +2,24 @@
 //  EmojiMemoryGame.swift
 //  MemoryGame
 //
-//  Created by iMac on 12/06/2024.
+//  Created by Leandro on 12/06/2024.
 //
 
 import SwiftUI
 
-
-func createCardContent(forPairAtIndex index:Int) -> String{
-   return ["🙂","🥺","😻","😼","🎃","😵","😮‍💨","🙍🏻‍♀️"][index]
-}
-
 class EmojiMemoryGame{
     
-    private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairOfCards:4,cardContentFactory: createCardContent)
+    private static let emojis = ["🙂","🥺","😻","😼","🎃","😵","😮‍💨","🙍🏻‍♀️"]
+    
+    
+    private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairOfCards:8)
+    {
+        pairIndex in
+        if emojis.indices.contains(pairIndex){
+            return emojis[pairIndex]
+        }
+        return  "❌"
+    }
        
     
     var cards: Array<MemoryGame<String>.Card>{

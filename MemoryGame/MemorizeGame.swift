@@ -2,7 +2,7 @@
 //  MemorizeGame.swift
 //  MemoryGame
 //
-//  Created by iMac on 12/06/2024.
+//  Created by Leandro on 12/06/2024.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ struct MemoryGame<CardContent>{
     
     init(numberOfPairOfCards:Int, cardContentFactory:(Int)->CardContent){
         cards=[]
-        for pairIndex in 0..<numberOfPairOfCards{
+        for pairIndex in 0..<max(numberOfPairOfCards,2){
             let cardContent = cardContentFactory(pairIndex);
             cards.append(Card(content:cardContent))
             cards.append(Card(content:cardContent))
@@ -21,7 +21,7 @@ struct MemoryGame<CardContent>{
     }
     
     func choose(_ card: Card){
-        card.isFaceUp = true
+     //  card.isFaceUp = true
     }
     
     struct Card{

@@ -2,17 +2,14 @@
 //  CardView.swift
 //  MemoryGame
 //
-//  Created by iMac on 11/06/2024.
+//  Created by Leandro on 11/06/2024.
 //
 
 import SwiftUI
 
-struct Card:View {
+struct CardView:View {
     
-    let cardText:String
-    @State var isFaceUp = false
-
-    
+    let card:MemoryGame<String>.Card
     var body: some View{
         ZStack{
             let base = RoundedRectangle(cornerRadius: 12)
@@ -20,16 +17,16 @@ struct Card:View {
                 base
                 .foregroundColor(.white)
                 base.strokeBorder(lineWidth: 2)
-                Text(cardText).font(.largeTitle
+                Text(card.content).font(.largeTitle
                 ).padding()
             }
-            .opacity(isFaceUp ? 1: 0)
+            .opacity(card.isFaceUp ? 1: 0)
             base
-            .fill(.orange).opacity(isFaceUp ? 0 : 1)
+                .fill(.orange).opacity(card.isFaceUp ? 0 : 1)
                 
         }
         .onTapGesture {
-            isFaceUp.toggle()
+            //card
         }
     }
 }

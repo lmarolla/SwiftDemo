@@ -2,7 +2,7 @@
 //  MemoryGameApp.swift
 //  MemoryGame
 //
-//  Created by iMac on 10/06/2024.
+//  Created by Leandro on 10/06/2024.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct MemoryGameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmojiMemoryGameView()
         }
     }
 }
