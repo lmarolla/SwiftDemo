@@ -7,3 +7,7 @@ Usage of MVVM pattern:
 - EmojiMemoryGameView: Its the actual view implementation
 
 PS: Be sure to press the 🎉 after winning
+
+
+https://github.com/lmarolla/SwiftDemo/assets/74197657/dfe86f72-07bf-4d48-8d27-d122b9afad82
+
