@@ -17,16 +17,15 @@ struct CardView:View {
                 base
                 .foregroundColor(.white)
                 base.strokeBorder(lineWidth: 2)
-                Text(card.content).font(.largeTitle
-                ).padding()
+                Text(card.content)
+                    .font(.system(size: 200))
+                    .minimumScaleFactor(0.01)
+                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/).padding()
             }
             .opacity(card.isFaceUp ? 1: 0)
             base
                 .fill(.orange).opacity(card.isFaceUp ? 0 : 1)
                 
-        }
-        .onTapGesture {
-            //card
         }
     }
 }

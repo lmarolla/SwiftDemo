@@ -4,16 +4,14 @@
 //
 //  Created by Leandro on 12/06/2024.
 //
-
 import SwiftUI
 
-class EmojiMemoryGame{
+class EmojiMemoryGame:ObservableObject{
     
     private static let emojis = ["🙂","🥺","😻","😼","🎃","😵","😮‍💨","🙍🏻‍♀️"]
     
-    
-    private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairOfCards:8)
-    {
+    //Mark it as published to be observed
+    @Published private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairOfCards:3){
         pairIndex in
         if emojis.indices.contains(pairIndex){
             return emojis[pairIndex]
@@ -26,8 +24,12 @@ class EmojiMemoryGame{
         return model.cards
     }
     
-    func choose(_ card: MemoryGame<String>.Card){
-        model.choose(card)
+    func choose(_ card: MemoryGame<String>.Card) -> Bool{
+        return model.choose(card)
+    }
+    
+    func shuffle(){
+        model.shuffle()
     }
     
 }

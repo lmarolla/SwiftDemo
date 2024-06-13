@@ -14,6 +14,7 @@
 		451430472C17715500445C70 /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451430462C17715500445C70 /* MemoryGameTests.swift */; };
 		451430512C17715500445C70 /* MemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451430502C17715500445C70 /* MemoryGameUITests.swift */; };
 		451430532C17715500445C70 /* MemoryGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451430522C17715500445C70 /* MemoryGameUITestsLaunchTests.swift */; };
+		457CEB502C1BA14A000A18C9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 457CEB4F2C1BA14A000A18C9 /* ConfettiSwiftUI */; };
 		4589D2792C18CA0E00229638 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589D2782C18CA0E00229638 /* CardView.swift */; };
 		45DDBEC92C19F0F100831DB2 /* MemorizeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDBEC82C19F0F100831DB2 /* MemorizeGame.swift */; };
 		45DDBECB2C19FEE900831DB2 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDBECA2C19FEE900831DB2 /* EmojiMemoryGame.swift */; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457CEB502C1BA14A000A18C9 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = MemoryGame;
+			packageProductDependencies = (
+				457CEB4F2C1BA14A000A18C9 /* ConfettiSwiftUI */,
+			);
 			productName = MemoryGame;
 			productReference = 451430322C17715200445C70 /* MemoryGame.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 451430292C17715200445C70;
+			packageReferences = (
+				457CEB4E2C1BA0ED000A18C9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 451430332C17715200445C70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -600,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		457CEB4E2C1BA0ED000A18C9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		457CEB4F2C1BA14A000A18C9 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 457CEB4E2C1BA0ED000A18C9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4514302A2C17715200445C70 /* Project object */;
 }
